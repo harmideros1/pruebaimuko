@@ -51,6 +51,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+REST_FRAMEWORK = {
+    # 'EXCEPTION_HANDLER': 'rest_framework.views.exception_handler', #Se cambia el exception_handler de rest_framework por un custom_handler
+    'EXCEPTION_HANDLER': 'apps.user.utils.handler.custom_exception_handler',
+}
+
 ROOT_URLCONF = 'imukotest.urls'
 
 TEMPLATES = [
