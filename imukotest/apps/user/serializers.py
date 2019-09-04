@@ -15,4 +15,5 @@ class UserSerializer(serializers.ModelSerializer):
                     'cedula',
                     'telefono',
                     'correo',
+                    'full_name'
                 )

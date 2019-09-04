@@ -19,6 +19,10 @@ class User(models.Model):
         # Se que no fue la mejor forma de validar los numeros de telefono y cedula,
         # Pero no me funcionaron los REGEX
 
+    def full_name(self):
+        return self.nombres + " " + self.apellidos
+    full_name.short_description = "nombre completo"
+    full_name.admin_order_field = "apellidos"
 
     def __str__(self):
         return self.nombres + " " + self.apellidos

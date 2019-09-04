@@ -8,6 +8,7 @@ from rest_framework.response import Response
 class UserView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    http_method_names = ['get', 'post', 'put']
 
     def list(self, request):
         queryset = User.objects.all()
